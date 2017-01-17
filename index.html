@@ -5,20 +5,21 @@
 	<title>Weather Today</title>
 	<link rel="stylesheet" type="text/css" href="css/main_styles.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
 	<section class="weather_form">
 		<h1>Weather Today</h1>
 		<p>Enter desired city below to get weather forecast</p>
-		<input type="text" name="city" placeholder="Enter City">
-		<button class="get_weather">Get Weather</button>
+		<input id="city" type="text" name="city" placeholder="Enter City">
+		<button type="button" class="get_weather">Get Weather</button>
 	</section>
 	<section class="weather_output">
 
 	</section>
 
 </div>
-
+<script src="js/script.js"></script>
 </body>
 </html>

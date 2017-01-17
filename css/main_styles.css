@@ -45,12 +45,17 @@ h1{
     font-size: 90%;
     text-align: left;
     border: none;
+    background-color: #ffffff;
 }
 
 .weather_form input:focus{
     outline:none;
-    background-color: #f4f3f3;
+    background-color: #ffffff;
     color: #3c3c3c;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
 }
 
 .get_weather{
