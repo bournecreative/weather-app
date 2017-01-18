@@ -3,8 +3,8 @@ function weatherBtnHdler() {
 }
 
 function callWeatherScraper() {
+  
   if ($('#city').val() !== "") {
-    
     var city = $('#city').val();
     
     $.ajax({
@@ -14,11 +14,10 @@ function callWeatherScraper() {
       type: 'text',
       success: function (response) {
         if (response.indexOf("Warning")===10){
-          ($('.weather_output').text("Unknown City, Please Enter a Valid City"));
+          $('.weather_output').text("Unknown City, Please Enter a Valid City").removeClass("blue darken-1").addClass("card-panel red darken-3");
           $('#city').val("");
         }else{
-          console.log(response);
-          ($('.weather_output').text(response));
+          $('.weather_output').text(response).removeClass("red darken-3").addClass("card-panel blue darken-1");
           $('#city').val("");
         }
       },
@@ -27,7 +26,7 @@ function callWeatherScraper() {
       }
     })
   }else{
-    ($('.weather_output').text("Please Enter a City"))
+    $('.weather_output').text("Please Enter a City").removeClass("blue darken-1").addClass("card-panel red darken-3");
   }
 }
 
